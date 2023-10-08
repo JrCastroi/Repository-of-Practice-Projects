@@ -1,0 +1,52 @@
+Que es CSS?
+
+significa cascading style sheets
+describe la presentacionde docs HTML
+un doc html puede tener multiples css
+
+Como funciona?
+
+funciona en base a selectores, con css vamos a ir a seleccionar elementos que se encuentren dentro de nuestro docs HTML.
+Podemos seleccionar un unico elemento o multiples elementos
+
+ejemplo:
+
+html #elemento
+     {
+	text-align: left;
+	color: tomato;
+     }
+
+* # el * significa que se selecciona todos los elementos del docs HTML
+  {
+	box-sizing: border-box:
+  }
+
+
+
+.card # aqui seleccionamos el elemento o los elementos con la clases card
+      {
+	backgroind-color: white;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      }
+
+
+
+existen distintas formas para seleccionar elementos en css. se le pueden poner distintas propiedades con distintos valores.
+
+
+Su estructura base es:
+
+selector = html, parentesis de llaves = {}, propiedades = text-align, seguido de un :, el valor que este va a tener left, finaliza con ;
+
+resumido
+
+html {text-align: left;
+}
+
+
+
+
+
+

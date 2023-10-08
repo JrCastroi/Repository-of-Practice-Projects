@@ -1,0 +1,560 @@
+/*  SELECTOR  */
+
+#titulo {
+    color: tomato;
+}
+/* para indicarle a css que vamos a usar una id se utiliza el # */
+
+p.texto {
+    color: blueviolet;
+}
+
+/* para indicarle a css que vamos a usar una class se utiliza el . */
+/* para indicarle a la pagina utilizando css que solamente queremos asignarle
+ un style de css a las etiquetas de <p> que tambien contengan de class="texto" 
+ eso se hace poniendo una p antes de la class ejemplo: linea-11   p.texto*/
+
+p.especial {
+    color: aquamarine;
+}
+/* el css siempre tiene prioridad lo que escribiste al final del codigo de css con respecto a lo que escribio al principio  */
+
+
+div p { /*Esto hace que en todas nuestras etiquetas de div que contengan hijos(ramas) de etiqueta p que pueden ser tambien 
+    nietos... van a tener el siguiente estilo, es decir que si quiero que solo me tenga en cuenta las etiquetas que estan
+     dentro de los div tengo que poner div (etiqueta en cuestion)*/
+    color: green;
+}
+
+div h2, div h3 { /* se puede colocar mas de un selector colocando una , de por medio. */
+    color: brown;
+}
+
+* { /* el * selecciona todos los elementos dentro del html. este selector no cambia los elementos que han sido definidos
+    anteriormente en css*/
+
+    font-size: 24px;
+    /* color: black; */
+}
+
+/* COLORES, VALORES Y CONVENCIONES */
+
+.color {
+    color: tomato;
+    /* para poder ver una lista de los colores dentro de vscode se pulsan las teclas ctrl + espacio*/
+}
+
+/* esta no es la unica manera de poner colores en css, hay otras 2 alternativas para esto. */
+
+.color3 {
+    color: rgb(0, 0, 255);
+    /* 1- La convencion RGB: se indica escribiendo rgb(0, 0, 0) = rgb(red, green, blue), funciona muy parecido a la
+ hexadecimal con la diferencia de que indicamos los valores del rgb con numeros del 0 al 255
+ 
+ el rgb tiene otra propiedad, si le agregamos un , adicional ahora pasa a ser rgba y lo que representa el a es la opacidad
+ con valores de 0 y 1 donde 1 es un color solido y 0 es full transparente, (se pueden jugar con la opacidad con los numeros del medio)
+ rgba(0,0,0,0.3)
+ */
+}
+
+.color1 {
+    color: #f00;
+    /* 2- Hexadecimales: se anotan con un simbolo # al comienzo y es siempre asi. seguido de eso vienen 6 caracteres que pueden
+ ir desde 0 hasta f (0 es la ausencia de color (negro) y f es la presencia de todos los colores). aqui se puede indicar los
+ colores de 2 formas, utilizando 3 caracteres o 6 caracteres. 
+
+con la de forma de 3 digitos se basa en que el primer digito representa el rojo, el segundo el verde y el tercero el azul
+#000 = #rgb */
+}
+
+.color2 {
+    color: #f10000;
+
+    /*con la forma de 6 digito se basa en que los 2 primeros digitos son rojo, los siguietes dos son verdes y los ultimos dos son azules
+en pocas palabras la base es la misma solo que al tener un digito mas por cada representacion de color tenemos mas juego para las
+intensidad y variedad de color #000000 = #rrggbb
+*/
+}
+
+/* Border */
+
+/* 
+dotted
+dashed
+solid
+double
+none
+hidden
+groove
+ridge
+insed
+outsed
+Los ultimos 4 son valores se pueden asignar a elementos tridimensionales y la forma que se muestran depende del color indicado
+*/
+
+.border {
+    border: 5px black solid;
+    /* Esto sirve para asignarle un borde a los elementos de html, el primer dato que le tenemos que pasar es el grosor del borde,
+    el segundo es el color y el tercero es el estilo del border (los estilos disponibles estan en el comentario de arriba)
+    en pocas palabras cuando se usa la etiqueta border tenemos que darle los datos del grosor, color y estilos
+    */
+}
+
+.border2 {
+    border-style: solid;
+    border-color: #ff9203;
+    border-radius: 5px;
+    border-width: 5px;
+    /*otras propiedades para border
+    border-style = nos permite asignarle el estilo del borde sin decirle el ancho y el color
+    border-color = nos permite asignarle el color del borde sin decirle el grosor y el estilo
+    border-radius = nos permite asignarle un borde redondeado a nuestro borde
+    border-width = nos permite asignarle el ancho a nuestro borde
+    */
+}
+
+/* UNIDADES DE MEDIDA */
+
+/*
+Las siguientes medidas son absolutas
+
+px = pixel, (1px = 1/96th of 1in)
+cm = centimetros
+mm = milimetros
+in = pulgadas, (1in = 96px = 2.54cm)
+pt = points, (1pt = 1/72 of 1in)
+pc = picas, (1pc = 12 pt)
+
+las siguientes medidas son relativas
+
+em = 2 veces el tamaño de la fuente que se esta utilizando actualmente,es relativo al tamaño de la fuente del elemento en cuestion.
+es decir: si asignamos un borde de 2em a un <h1> de 10px no va ser igual que si asignamos un borde de 2em a un <h1> de 20 px.
+
+rem = es parecido al em pero este es relativo a la fuente del elemento raiz, el elemento raiz se encuentra dentro de nuestra etiqueta html
+por lo general son 16px asi que podemos deducir que un rem son 16px, 2rem son 32px... al menos que nosotros cambienmos el tamaño de la
+fuente de nuestro html
+*/
+
+
+/* BACKGROUND */
+
+#fondo {
+    background-color: #f00;
+    /* opacity: 0,3; */
+    background-image: url('dalia.jpg');
+    height: 900px;
+    width: 900px;
+    background-size: 400px 400px;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+
+    background: #ff9203 url('dalia.jpg') repeat-y bottom center / 300px 300px;
+    
+    /*
+    propiedades de background
+    background-color = el color del fondo pdj xd, si le damos el color con rgba podemos jugar con la opacidad del fondo
+    opacity = asigna una transparencia al elemento completo
+    background-image = asigna una imagen de fondo
+    
+    background-repeat = asigna si la imagen se repite o no, y como se repite, es decir, si se repite verticalmente u horizontalmente
+    con los siguientes valores:
+
+    no-repeat = no repite la imagen
+    repeat-x = repite la imagen de manera horizaontal  
+    repeat-y = repite la imagen de manera vertical
+
+    background-position = asigna la posicion donde comienza a repetir la imagen con los siguientes valores: 
+
+    eje horizontal = left, rigth, center
+    eje vertical = top, bottom, center
+
+    background-size = puede redimencionar la imagen de fondo, esta propiedad tienes distintos valores los cuales son:
+    
+    auto = detecta el tamaño que deberia de tener automaticamente, es el valor por defecto
+    cover = utiliza las medidas que tiene disponible para dar un resultado proporcional
+    contain = contiene la imagen dentro de las medidas que le especifiquemos
+
+    los siguiente valores son dimensiones: siendo el primero el ancho y el segundo el alto
+    width = asigna un alto
+    height = asigna un ancho
+
+    ahora todo las propiedades anteriores se pueden resumir en una sola propiedad que es
+    background: ; (ejemplo en el articulo de background). el orden para esto seria
+    color image repeat position / size
+    */
+}
+
+/* BOX MODEL, MARGIN, PADDING, OVERFLOW */
+
+.margen {
+    background-color: chocolate;
+    margin: 15px 20px;
+    padding: 30px 25px;
+    border: #000000;
+    height: 100px;
+    width: 50;
+    overflow: auto;
+    outline: 1px solid red;
+
+/*
+margin = con esta propiedad podemos darle espacios por fueras de los elementos que nosotros asignemos, los 
+valores de los distinto lados del elemento (top, right, bottom, left. en este orden) y se
+colocan de la siguiente manera = margin: top right bottom left (ese es el orden de cada lado, a la hora de llevarlo al css, 
+se hacen con las unidades de medida), si solo se le introduce un valor, si solo le pasamos un valor este asignara ese valor a los
+cuatro lados del margin y si son dos, asignara el primer valor al eje vertical y el segundo al eje horizontal. Tambien se le pueden
+asignar 3 valores y este valor seria el margen de abajo.
+
+margin-(top, buttom, left, right) = asigna un valor para cada lado. no voy a escribir que hacen individualemente cada uno
+por obvias razones.
+
+padding = funciona igual que el margin solo que en vez de ser afuera del elemento, este funciona dentro del elemento.
+tiene las misma propiedades
+
+Con height y width podemos modificar el alto y ancho del elemento
+
+overflow = se usa para controlar el comportamiento del contenido que se encuentra en una caja o contenedor. sus valores son:
+
+visible = valor por defecto. el desbordamiento no se recorta, el contenido se muestra fuera del cuadro del elemento
+hidden = el desbordamiento se recorta y el resto del contenido es ocultado
+scroll = el desbordamiento se recortay se agrefa una barra de desplazamiento para ver el resto del contenido
+auto = similar a scroll, pero solo agrega barras de desplazamiento cuando es necesario
+
+box-model = es como se posiciona cada elemento html en nuestro documento, y toda etiqueta html va a tener: margin, border, padding
+y el contenido. cuando nosotros idicamos un width este solo va a afectar al contenido que se encuentra dentro de la etiqueta. Esto
+no toma encuenta al margin, border y al padding, por eso para calcular todo el ancho o alto de nuestro contenido hay que sumar todos
+estos valores. (width, height, margin, border, padding y el contenido).
+*/
+
+/* OUTLINE, TEXT-ALIGN, TEXT-DECORATION, TEXT-SHADOW */
+
+/*
+outline = es lo mismo que el border solo que por fuera del border, tiene los mismos valores que este.
+*/
+}
+
+.text {
+    text-align: center;
+    text-decoration: overline;
+    text-shadow: 3px 5px 5px blue;
+    font-family: 'Roboto', sans-serif;
+
+
+    /* 
+    text-align = nos sirve para dejar el texto centrado, justificado, a la izquierda o a la derecha. el valor de left viene por 
+    defecto, los valores son center, right, left, justify. 
+
+    text-decoration = asigna una decoracion a los textos con los siguientes valores: none (por defecto), underline (linea por debajo
+    como subrayado), line-through (linea como tachando el texto), overline (linea por arriba del texto).
+
+    text-shadow = asigna una sombra o sombreado, recibe los siguiente valores: 3px (el primer valor es cuanto se mueve hacia la derecha)
+    5px (el segundo valor es cuanto se va a mover la sombra hacia abajo). si solo se le pasa estos dos valores, el texto queda como un
+    duplicado haacia abajo y derecha. 5px(el tercer valor es un difuminado del texto) blue (el siguiente valor es un color).
+    importante, este texto adicional aparece por detras del texto que escribimos. ejemplo
+    text-shadow: 3px (derecha) 5px (abajo) 5px (difuminado) blue (color);
+    */
+
+    /* FUENTES CUSTOMS */
+
+    /*
+    font-family = con esto se le puede cambiar la funete al texto. Para usar una fuente customs desde internet (en este caso google fonts)
+    se hace con el copiando el link desde la pagina y pegandolo en el <head> y para cargarlo es de la siguiente manera.
+    font-family: 'Roboto(nombre de la fuente)', sans-serif(esto es por si no se puede cargar la primera fuente cargue esta, se pueden
+    agregar mas);
+    */
+}
+
+
+/* LINKS Y SUS ESTADOS */
+
+/* 
+los links tiene 4 posibles estados: 1- cuando nunca ha sido visitado, 2-cuando ha sido visitado, 3- cuando se le pasa el mause por encima
+y el 4- cuando esta activo.
+
+a:link = selecciona cuando el link no ha sido visitado
+a:visited = aplica los estilos a los link que ya fueron visitados
+a:hover = aplica el estilo cuando se pasa el mause por encima
+a:active = aplica el estilo cuando se esta pinchando el link
+
+el orden en que se colocan estos estilos es importante y este orden es el siguiente
+
+a:link 
+a:visited
+a:hover
+a:active
+
+si se quiere agregar el estilo a:active , se tienen que agregar a:link, a:visited, a:hover. Si quiero utilizar a:visited, tengo que agregar
+a:link. es decir si quiero utilizar una combinacion tengo que ponerlos en su respectivo orden.
+
+a estos selectores se le pueden aplicar todas las propiedades de css.
+*/
+
+a:link {
+    color: blueviolet;
+}
+a:visited {
+    color: gray;
+}
+a:hover {
+    color: #f00;
+}
+a:active {
+    color: yellow;
+}
+
+/* LISTAS */
+
+ul {
+    background-color: cyan;
+
+    list-style-type: none;
+    padding-left: 0;
+    
+
+/*
+se le pueden agregar las propiedades vistas anteriormente. las listas tiene un padding de 40px a la izquierda
+
+list-style-type = Establece el estilo de los marcadores visuales de las listas. Los valores posibles incluyen 
+disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-latin, upper-latin,
+armenian, georgian, lower-alpha, upper-alpha y none.
+
+list-style-position: Establece la posición del marcador visual dentro de la lista. Los valores posibles incluyen inside y outside
+
+list-style-image: Establece una imagen como marcador visual para los elementos de la lista.
+*/
+}
+
+/* TABLAS */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th {
+    background-color: tomato;
+    color: white;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer
+}
+
+/*
+puede usar las propiedades anteriormente vistas
+
+border-collapse =  se utiliza para fusionar los bordes de las celdas de una tabla. Tiene dos valores posibles:
+
+separate: Las celdas adyacentes tienen sus propios bordes y no comparten los bordes con las celdas vecinas1.
+collapse: Las celdas adyacentes comparten los mismos bordes, lo que da la apariencia de que los bordes están fusionados1.
+
+selector tr:nth-child() = Este selector acepta un argumento que puede ser un número, una palabra clave (como odd o even) o una fórmula matemática (como 2n+1). El argumento especifica la posición del elemento que se va a seleccionar. Por ejemplo, el selector :nth-child(2) selecciona el segundo elemento hijo de su padre.
+
+Aquí hay algunos ejemplos de cómo utilizar el selector :nth-child():
+
+p:nth-child(odd) selecciona todos los párrafos impares.
+li:nth-child(even) selecciona todos los elementos de lista pares.
+div:nth-child(3n+1) selecciona cada tercer elemento hijo, comenzando por el primer elemento.
+*/
+
+/* DISPLAY, MAX-WIDTH Y POSITION */
+
+span {
+    display: block;
+    max-width: 300px;
+    background-color: #f00;
+}
+.inline {
+    display: inline;
+}
+
+#position {
+    position: relative;
+    left: 20px;
+    /* top: 25px; */
+}
+
+.inline-block {
+    display: inline-block;
+    height: 55px;
+    background-color: #f00;
+
+    /*el inline-block es muy similar a inline pero con la diferencia que se le puede asignar un ancho y un alto, al valor de inline
+    no se le puede asignar una alto u ancho.
+    
+    */
+}
+
+
+/*
+
+display = se utiliza para especificar cómo se debe mostrar un elemento en una página web. Determina si un elemento se
+trata como una caja de bloque o en línea y el diseño utilizado para sus hijos. La propiedad display tiene varios valores 
+posibles, incluyendo:
+
+block: El elemento genera una caja de bloque, lo que significa que genera saltos de línea antes y después del elemento 
+cuando está en el flujo normal.
+
+inline: El elemento genera una o más cajas en línea que no generan saltos de línea antes o después de sí mismas.
+
+inline-block: El elemento genera una caja de contenedor de bloque en línea, que se comporta como una caja de bloque 
+pero también participa en el diseño en línea.
+
+flex: El elemento genera una caja de contenedor flexible a nivel de bloque, que se utiliza para diseños flexibles.
+
+none: oculta los elementos
+
+etiquetas de html que vienen por defecto con un valor de inline son: sapn, a, img.
+
+--------
+
+visibility = se utiliza para especificar si un elemento debe ser visible u oculto en una página web. 
+No afecta el diseño del documento. La propiedad visibility tiene varios valores posibles, incluyendo:
+
+visible: El elemento es visible y ocupa espacio en la página.
+hidden: El elemento está oculto pero aún ocupa espacio en la página.
+collapse: Este valor solo se aplica a filas de tabla (<tr>), grupos de filas (<tbody>), columnas (<col>) y 
+grupos de columnas (<colgroup>). Elimina una fila o columna del diseño de la tabla, pero el espacio que ocupa 
+aún está disponible para otro contenido.
+
+max-width = asigna un ancho maximo al elemento pero puede tener menos si asi lo requiere
+
+position = en CSS se utiliza para especificar cómo un elemento es posicionado en el documento. Las propiedades top, right, bottom y 
+left determinan la ubicación final de los elementos posicionados. La propiedad position tiene varios 
+valores posibles, incluyendo:
+
+static: El elemento se coloca en su posición normal en el flujo del documento
+
+relative: El elemento se coloca en relación a su posición normal.
+
+absolute: El elemento se coloca en una posición absoluta en relación a su bloque contenedor.
+
+fixed: El elemento se coloca en una posición fija en relación a la ventana del navegador.
+
+sticky: El elemento se coloca en una posición relativa hasta que alcanza un límite establecido, momento en el cual se vuelve fijo.
+*/
+
+/* FLOAT */
+
+.left {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+    
+}
+
+.container {
+    height: 200px;
+}
+
+.column {
+    margin: 0 ;
+    padding: 10px 0;
+    width: 33.3%;
+}
+
+/*
+float = La propiedad float en CSS permite ubicar un elemento al lado izquierdo o derecho de su contenedor. 
+Esto permite que los elementos de texto y en línea aparezcan a su costado1. El elemento flotante es removido del 
+flujo normal de la página, aunque aún sigue siendo parte del flujo.
+
+Aquí tienes una descripción más detallada de la propiedad float en CSS:
+
+Valores clave
+
+float: left;
+float: right;
+float: none;
+float: inline-start;
+float: inline-end;
+
+ Valores globales
+
+float: inherit;
+float: initial;
+float: unset;
+
+
+left ubica el elemento a la izquierda de su bloque contenedor 
+right lo ubica a la derecha.
+none indica que el elemento no deberá flotar 
+inline-start e inline-end ubican el elemento en el costado de inicio y final de su bloque contenedor, respectivamente.
+
+*/
+
+/* CENTRAR UN ELEMENTO */
+
+.center {
+    padding: 50px 0;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: tomato;
+}
+
+
+/*
+box-shadow = permite añadir efectos de sombra alrededor del marco de un elemento. se pueden definir multiples efectos separados por 
+comas, la caja de la sombra se describe por los desplazamientos en x e y, los radios de desenfoque y dispersion, y el color relativos
+al elemento.
+
+offset-x = desplazamiento horizontal de la sombra.
+offset-y = desplazamiento vertical de la sombra.
+blur-radius = radio de desenfoque de la sombra.
+color: color de la sombra.
+
+cursor =  permite cambiar la forma del cursor del ratón cuando se sitúa sobre un elemento. 
+Para modificar el cursor del ratón, se debe especificar la propiedad cursor dentro del elemento deseado, junto 
+con el valor del cursor deseado.
+
+Aquí hay algunos valores predefinidos para la propiedad cursor:
+
+auto: El navegador determina el cursor que se mostrará basado en el contenido presente.
+default: El cursor predeterminado (normalmente una flecha).
+pointer: El cursor utilizado cuando se sitúa sobre un enlace (normalmente una mano).
+move: El objeto seleccionado puede moverse.
+text: Texto seleccionable (normalmente un cursor de texto).
+wait: El programa está ocupado (a veces un reloj de arena o un reloj).
+help: Indica que hay ayuda disponible.
+crosshair: Indica selección en una imagen.
+not-allowed: Indica que no se puede realizar una acción.
+
+transition = permite definir la transición entre dos estados de un elemento. Esta propiedad es una propiedad abreviada de 
+transition-property, transition-duration, transition-timing-function y transition-delay.
+
+La propiedad transition-property especifica las propiedades CSS que se deben animar. La propiedad transition-duration especifica 
+la duración de la transición. La propiedad transition-timing-function especifica la curva de velocidad de la transición. La 
+propiedad transition-delay especifica el tiempo que debe transcurrir antes de que comience la transición.
+
+Aquí hay un ejemplo de cómo utilizar la propiedad transition:
+
+selector {
+  transition: property duration timing-function delay;
+}
+
+Donde:
+
+property: Especifica las propiedades CSS que se deben animar.
+duration: Especifica la duración de la transición.
+timing-function: Especifica la curva de velocidad de la transición.
+delay: Especifica el tiempo que debe transcurrir antes de que comience la transición.
+
+*/
+
+
+
+

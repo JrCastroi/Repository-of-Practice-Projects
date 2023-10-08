@@ -1,0 +1,102 @@
+ <!--como hacer los formularios. -->     
+
+    <form action="/formulario" method="post">
+
+        <!--Este comentario es de mas adelante en el futuro del que escribio lo que esta por debajo xd
+        si un comentario abajo te mando para arriba hola ajajh, si no sigue bajando.
+
+        siguiendo el comentario de abajo para indicarle a donde va a ir la informacion de nuestro 
+        formulario nos vamos dentro de la etiqueta form y ponemos la propiedad de action="" y dentro de esta
+        tenemos que poner la ruta dentro de nuestro servidor, tambien puede ser dentro de un app u otra web
+        pero eso no viene al caso en este curso (investigar sobre eso xd)
+        -->
+
+
+        <!-- A partir de aqui empieza el form, lo de arriba es algo mas avanzado!!!!! -->
+
+
+        <!--indicar el metodo que vamos a utilizar para enviar los datos a nuestro servidor, y usaria el method="" para indicarlo.
+
+        Ahora, tenemos dos alternativas
+
+        GET: lo que hara sera enviar los valores que se encuantran dentro de los campos a travez de la url
+
+        POST:lo que hara el POST sera enviar los datos que se encuentran dentro de los campos a travez del header
+
+        lo unico que diferencia realmente estos dos metos es que en get tenemos un limite de 240 caracteres en la url.
+        por seguridad las dos son igual de inseguro
+        -->
+        
+        <label for="nombre">Nombre</label>
+
+        <!--el input lo que hace es que me permite recoger informacion del usuario
+            y con el for="" en el label lo que va hacer es cuando le de click en el 
+            label me marque directamente en la casilla del input, para esto en <input/>
+            se necesita poner el atributo id="" con el mismo nombre que colocamos en el for=""
+        -->
+        
+        <!-- IMPORTANTE una propiedad importante del campo de input es la propiedad de name=""
+        es importante porque a la hora de enviar nuestro formulario a un servidor, el servidor
+        va a interpretar los datos del formulario por el nombre que nosotros le pongamos,
+        un ejemplo seria que si en name le pongo nombre y mando aguacate el servidor interpreta que aguacate
+        es mi nombre.
+        -->
+        <!-- value="" es un valor por defecto que le podemos poner a nuestro input.
+        esto no funciona con el <textarea> en ese caso se colocaria el valor por defecto dentro de la etiqueta.
+        -->
+        <input value="qlq manao" type="text" id="nombre" name="nombre" placeholder="Nombre" />
+
+        <br>
+        <!--el atributo placeholder="" por lo general se utiliza para indicar que informacion se requiere 
+        dentro del input en caso del ejemplo era el nombre
+        -->
+        <!--otro atributo importante en la etiqueta de input, es el atributo de type="" esta etiqueta nos
+        permite asignarle distintos valores para que la etiqueta de input se comporte de diferente manera
+        diferente dependiendo del valor que nos de esa propiedad, por ejemplo: type="text", type="submit"
+        type="email", type="password" (buscar e incluir este contenido a las notas de html con las etiquetas).
+        la etiqueta input trae el valor text por defecto
+        -->
+        
+        <label for="apellido">Apellido</label>
+        <input value="qlq manao" type="text" id="apellido" name="apellido" placeholder="Apellido" />
+        <br>
+        <label for="comentario">Comentario</label>
+        <textarea cols="50" rows="10" id="comentario" name="comentario" placeholder="ingrese comentario">akilbak; alv</textarea>
+        <br>
+        <!-- con cols="" modificas las columnas y con rows="" las filas... mas informacion en las notas de html-->
+
+        <!-- Textarea: es una etiqueta que reprensenta un control para la edicion multilinia de texto sin formato.
+        en textarea no sirve el atributo value. ya que simplemente al escribir en la etiqueta le agg un valor por defecto.
+        -->
+            
+
+        <!--easter egg para el futuro, mientras estoy estudiando estoy grindeando una cuenta de osrs xd.
+        posiblemnte en el futuro ya no lo juegue pero xd ta weno el juego
+        xdddddd como 3 meses despues retomo el juego y sigo grindiando mientras estudio. PD: deje el juego y deje de estudiar tambien xd
+        -->
+
+        <!-- !!!    <input type="submit"/>  abajo el sustituto de esta etiqueta  !!! -->
+
+        <button type="button">tipo boton</button>
+        <button type="reset">tipo reset</button>
+        <button type="submit"><img src="img/OIP.jpeg"/>tipo submit</button>
+
+        <!-- Es importante que cuando pongamos una etiqueta de <button> definamos tambien su type, dentro de 
+        type podemos pasar 3 valores: button, reset, submit
+
+        button: un button de type button, simplemente sera un button que no hara nada, su comportamiento lo tenemos
+        que definir pero eso lo haremos con javasscrip
+
+        reset: esto dejara el formulario con los valores que tenia por defecto (lo resetea xd)
+
+        submit: Este es el valor predeterminado del button cuando se crea dentro de un form, y bueno ya sebaemos que
+        esto envia el formulario.
+
+        la ventaja de las etiquetas de button es que se le pueden agregar etiquetas y son mas personalizables
+        asi como en el ejemplo.
+        -->
+
+        <!-- ahora al envair la informacion al servidor le tenemos que decir a donde enviarla y eso lo hacemos dentro de la etiqueta
+        de form asi que en el inicio de la etiqueta de form va a ver otro comentario xd -->
+
+    </form>

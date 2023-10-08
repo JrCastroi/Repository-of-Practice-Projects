@@ -1,0 +1,113 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    margin: 0;
+    background-image: url(./image/bg.jpg)   
+
+}
+* {
+    box-sizing: border-box;
+}
+.card__container {
+    position: relative;
+    width: 99vw;
+    height: 100vh;
+    padding: 1.5rem;
+}
+
+.card__body-one, .card__body-two, .card__body-tree, .card__body-four, .card__body-five {
+    border-radius: 2rem;
+    position: absolute;
+}
+.card__body-one, .card__body-two {
+    top: 4rem;
+    height: 40vh;
+}
+.card__body-tree, .card__body-four {
+    bottom: 4rem;
+    height: 40vh;
+}
+.card__body-two, .card__body-tree {
+    width: 30vw;
+}
+.card__body-one, .card__body-four {
+    width: 40vw;
+}
+.card__body-one, .card__body-tree {
+    left: 2rem;
+}
+
+.card__body-one {
+    background-color: #12486B;
+    width: 40vw;
+    color: #F5FCCD;
+}
+
+.card__body-two {
+    background-color: #F5FCCD;
+    left: 45rem;
+}
+
+.card__body-tree { 
+    background-color: #78D6C6;
+}
+
+.card__body-four {
+    background-color: #419197;
+    left: 35rem;
+}
+
+.card__body-five {
+    background-color: #12486B;
+    color: #F5FCCD;
+    width: 20vw;
+    height: 86vh;
+    right: 2rem;
+    top: 4rem;
+}
+
+.card__info, .card__image {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card__image {
+    width: 4rem;
+    margin: 1rem;
+    padding-bottom: 1em;
+}
+
+.card__info {
+    margin-bottom: 0.25rem;
+    border-radius: 50%;
+}
+
+.card__name, .card__category {
+    font-weight: 700;
+}
+
+.card__name {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__category {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+    color: #310A5D;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card__text, .card__text-bolt {
+    margin: 1rem;
+    padding-top: 0.5em;
+    padding-right: 1rem;
+}
+
+.card__text-bolt {
+    font-weight: 700;
+    font-size: 1.15em;
+    padding-top: 0;
+    margin-top: 0.2rem;
+}

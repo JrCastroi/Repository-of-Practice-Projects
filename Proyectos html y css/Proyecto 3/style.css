@@ -1,0 +1,92 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #c2c2c2;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+ * {
+    box-sizing: border-box;
+ }
+
+header {
+    background-color: rgb(49, 77, 143);
+    padding: 3rem 2rem;
+}
+
+.main-title {
+    display: block;
+    font-size: 2.5rem;
+
+}
+.subtitle {
+    width: 30%;
+    margin: 0 auto;
+}
+.cards {
+    position: relative;
+    width: 1200px;
+    height: 550px;
+    margin: 5em auto;
+}
+
+.card {
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background-color: #eee;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgb(49, 77, 143, 0.3);
+    padding: 0 2em;
+}
+
+.card--yellow {
+    border-top: 5px solid yellow;
+}
+.card--coral {
+    border-top: 5px solid coral;
+}
+.card--blue {
+    border-top: 5px solid cornflowerblue;
+}  
+
+.card__title, .card__text {
+    text-align: left;
+}
+.card__icon {
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+
+.card--left, .card--right {
+    top: 150px;
+}
+
+.card--left {
+    left: 0;
+}
+
+.card--top {
+    top: 0;
+    left: 425px;
+}
+
+.card--right {
+    right: 0;
+}
+
+.text-light {
+    color: grey;
+}
+
+.title-light {
+    color: black;
+    opacity: 0.3;
+}

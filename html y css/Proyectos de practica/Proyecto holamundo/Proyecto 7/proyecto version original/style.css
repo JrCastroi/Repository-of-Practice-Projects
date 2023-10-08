@@ -1,0 +1,115 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./image/bg.jpg);
+    overflow: hidden;
+}
+
+.grid-container {
+    position: relative;
+    width: 1400px;
+    margin: 3rem auto;
+}
+
+.card {
+    display: inline-block;
+    height: 400px;
+    vertical-align: top;
+    margin-right: 1.5em;
+    padding: 2em;
+    line-height: 1.5;
+    border-radius: 1em;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.card__text {
+    opacity: 0.7;
+    font-size: 0.95em;
+}
+
+.card--one {
+    width: 675px;
+}
+
+.card--two {
+    width: 350px;
+}
+
+.card--tree {
+    width: 300px;
+    margin-right: 0;
+    height: 825px;
+}
+
+.card--four, .card--five {
+    position: absolute;
+    top: 425px;
+}
+
+.card--four {
+    left: 0;
+    width: 325px;
+}
+
+.card--five {
+    left: 355px;
+    width: 700px;
+}
+
+.card--darkblue, .card--blue, .card--greyblue {
+    color: azure;
+}
+
+.card--darkblue {
+    background-color: #12486B;
+}
+.card--blue {
+    background-color: #2E97A7;
+}
+.card--greyblue {
+    background-color: #419197;
+}
+.card--lightblue {
+    background-color: #A6F6FF;
+}
+
+.user {
+    width: 250px;
+
+}
+
+.user__image {
+    border-radius: 50%;
+    max-width: 25%;
+}
+.user__image, .user__info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.user__name, .user__category {
+    margin: 0.5em 1em;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
