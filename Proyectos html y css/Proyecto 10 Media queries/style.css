@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./image/fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+nav {
+    background-color: #069;;
+    height: 80px;
+    width: 100%;
+}
+.enlace {
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo {
+    height: 40px;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: azure;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover {
+    background-color: blue;
+    transition: 0.5s;
+}
+.checkbtn {
+    font-size: 30px;
+    color: azure;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #069;
+    padding: 10px;
+    height: 80px;
+    border-radius: 40px;
+}
+.search_text {
+    border: none;
+    background: none;
+    outline: none;
+    color: azure;
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    transition: .3s;
+    width: 0;
+}   
+.button {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: azure;
+    font-size: 30px;
+}
+.search, .search_text, .button {
+    z-index: 1;
+}
+.search:hover > .search_text {
+    width: 500px;
+}
+@media (max-width: 1024px){
+    .enlace {
+        padding-left: 20px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    .search:hover > .search_text {
+        width: 300px;
+    }
+}
+@media (max-width: 801px){
+    .checkbtn {
+        display: block;
+    }
+    .search:hover > .search_text {
+        width: 190px;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: cornflowerblue;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 100;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    li a:hover, li a.active {
+        background: none;
+        color: brown;
+    }
+    #check:checked ~ul {
+        left: 0;
+    }
+}
