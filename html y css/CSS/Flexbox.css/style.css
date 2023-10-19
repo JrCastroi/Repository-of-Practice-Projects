@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 80px auto;
+    border: 3px solid #000;
+    display: flex;
+    /* flex-direction: column-reverse;*/
+    /*row | row-reverse | column | column-reverse */
+    /* flex-wrap: nowrap; */
+    /* nowrap | wrap | wrap-reverse */
+    /* justify-content: flex-start;*/
+    /* flex-start | flex-end | center | space_between | space-around | space-evenly*/
+    /* align-items: stretch;*/
+    /* stretch | flex-start | flex-end | center | baseline | initial*/
+}
+
+.element {
+    color: azure;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    /* order: 1; */
+    /* flex-grow: 2; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 150px; */
+    /* aling-self: auto; */
+
+
+
+
+}
+
+.element1 {
+    background-color: crimson;
+}
+
+.element2 {
+    background-color: purple;
+}
+
+.element3 {
+    background-color: steelblue;
+}
+
+
+/* Flexbox */
+
+/*
+FLEX-DIRECTION: La propiedad CSS flex-direction sirve para definir cómo se colocan los elementos flexibles dentro de un 
+contenedor flexible. Puedes elegir entre cuatro valores posibles:
+
+row: los elementos se colocan en una fila horizontal, siguiendo la direccion del texto. (izquierda a derecha)
+
+row-reverse: los elementos se colocan en una fila horizontal, pero en sentido inverso al texto (derecha a izquierda)
+
+column: los elementos se colocan en una columna vertical, siguiendo la direccion del bloque (arriba a abajo)
+
+column-reverse: los elementos se colocan en una columna vertical, pero en sentido inverso al bloque (abajo a arriba)
+
+FLEX-WRAP: La propiedad CSS flex-wrap se utiliza para especificar si los elementos flexibles deben envolver o no. puedes elegir entre 
+tres valores posibles: 
+
+nowrap: los elementos se colocan en una sola linea, lo cual puede llevar a que se desborde el contenedor flexible.
+
+wrap: los elementos se colocan en varias lineas.
+
+wrap-reverse: los elementos se colocan en varias lineas, pero en sentido inverso.
+
+MAIN AXIS AND CROSS AXIS: 
+El eje principal (main axis) y el eje cruzado (cross axis) son dos conceptos importantes en el modelo de layout flexbox. 
+El eje principal es el eje en el que se alinean los elementos, y el eje cruzado es el eje perpendicular al principal.
+
+Por defecto, el eje principal es horizontal y su dirección es de izquierda a derecha. El eje cruzado es vertical y su dirección es de 
+arriba hacia abajo.
+
+La dirección del eje principal se puede cambiar utilizando la propiedad flex-direction. La dirección del eje cruzado se ajusta 
+automáticamente en consecuencia.
+
+JUSTIFY-CONTENT:  La propiedad CSS justify-content se utiliza para especificar cómo se distribuyen los elementos flexibles a lo largo del 
+eje principal de su contenedor. Puedes elegir entre seis valores posibles:
+
+flex-start: los elementos se alinean al principio del contenedor.
+
+flex-end: los elementos se alinean al final del contenedor.
+
+center: los elementos se alinean en el centro del contenedor.
+
+space-between: los elementos se distribuyen uniformenmente a lo largo del eje principal, con el primer elemento al principio 
+y el ultimo elemento al final.
+
+space-around: los elementos se distribuyen uniformemente a lo largo del eje principal, con un espacio igual entre ellos.
+
+space-evenly: los elemntos se distribuyen uniformemente a lo largo del eje principal, con un espacio igual hacia todos los lados.
+
+ALIGN-ITEMS: La propiedad CSS align-items se utiliza para especificar cómo se alinean los elementos flexibles a lo largo del eje cruzado 
+de su contenedor. Puedes elegir entre seis valores posibles:
+
+stretch: los elementos se estiran para llenar el contenedor a lo largo del eje cruzado.
+
+flex-start: los elementos se alinean al principio del contenedor a lo largo del eje cruzado.
+
+flex-end: los elementos se alinean al final del contenedor a lo largo del eje cruzado.
+
+center: los elementos se alinean en el centro del contenedor a lo lago del eje cruzado.
+
+baseline: los elementos se alinean en la linea base comun de sus contenidos a lo largo del eje cruzado.
+
+initial: establece el valor inicial de la propiedad.
+
+ALIGN-CONTENT: La propiedad CSS align-content se utiliza para especificar cómo se distribuyen las líneas flexibles a lo largo del eje 
+cruzado de su contenedor. Puedes elegir entre seis valores posibles:
+
+stretch: las lineas se estiran para llenar el contenedor a lo largo del eje cruzado
+
+flex-start: las lineas se alinean al principio del contenedor a lo largo del eje cruzado.
+
+flex-end: las lineas se alinean al final del contenedor a lo largo del eje cruzado.
+
+center: las lineas se alinean en el centro del contenedor a lo largo del eje cruzado.
+
+space-between: las lineas se distribuyen uniformenmente a lo largo del eje cruzado, con el primer elemento al principio 
+y el ultimo elemento al final.
+
+space-around: las lineas se distribuyen uniformemente a lo largo del eje cruzado, con un espacio igual entre ellos.
+
+space-evenly: las lineas se distribuyen uniformemente a lo largo del eje cruzado, con un espacio igual hacia todos los lados.
+
+ORDER:  La propiedad CSS order se utiliza para especificar el orden en que se muestran los elementos flexibles dentro de su 
+contenedor. Puedes asignar un valor numérico a cada elemento para indicar su posición relativa en el orden de visualización. 
+Los elementos con un valor de order menor se muestran antes que los elementos con un valor de order mayor.
+
+FLEX-GROW:  La propiedad CSS flex-grow se utiliza para especificar cuánto espacio adicional debe ocupar un elemento flexible 
+dentro de su contenedor flexible. El valor de flex-grow es un número que representa la proporción del espacio disponible que 
+debe ocupar el elemento. Si todos los elementos tienen el mismo valor de flex-grow, se distribuirá el espacio adicional de manera 
+uniforme entre ellos. Si algunos elementos tienen un valor de flex-grow mayor que otros, recibirán una proporción mayor del espacio 
+adicional
+
+FLEX-SHRINK: La propiedad CSS flex-shrink se utiliza para especificar el factor de contracción de un elemento flexible dentro de su 
+contenedor flexible. Los elementos flexibles se encogerán para llenar el contenedor de acuerdo a su número flex-shrink, cuando el tamaño 
+por defecto de los elementos flexibles sea mayor al de su contenedor flexible.
+
+Puedes asignar un valor numérico a cada elemento para indicar su factor de contracción. Si todos los elementos tienen el mismo valor 
+de flex-shrink, se encogerán de manera uniforme. Si algunos elementos tienen un valor de flex-shrink mayor que otros, se encogerán en 
+una proporción mayor.
+
+FLEX-BASIS:  La propiedad CSS flex-basis se utiliza para especificar el tamaño inicial de un elemento flexible. Esta propiedad 
+determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando box-sizing.
+
+Puedes asignar un valor numérico o una palabra clave a cada elemento para indicar su tamaño inicial. Los valores posibles son:
+
+auto: el tamaño inicial es el tamañopor defecto del elemento.
+
+<ancho>: un valor numerico seguido de una unidad absoluta tal como px, mm o pt, o un porcentaje del tamaño principal de un contenedor
+flexible padre. Los valores negativos no son validos.
+
+content: indica el dimensionamiento automatico, basado en el contenido del elemento flexible.
+
+fill: indica que el elemento debe llenar todo el espacio disponible en su contenedor flexible.
+
+fill-content: indica que el elemento debe ajustarse al tamaño minimo necesario para contener su contenido.
+
+ALIGN-SELF: La propiedad CSS align-self se utiliza para alinear un elemento flexible dentro de su contenedor flexible en el eje cruzado. 
+Esta propiedad anula el valor de align-items para el elemento en cuestión. Puedes elegir entre seis valores posibles:
+
+auto: usa el valor de align-items del contenedor.
+flex-start: alinea el elemento al principio del contenedor.
+flex-end: alinea el elemento al final del contenedor.
+center: centra el elemento en el contenedor.
+baseline: alinea el elemento con la linea base de su contenido.
+stretch: estira el elemento para llenar el contenedor. 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

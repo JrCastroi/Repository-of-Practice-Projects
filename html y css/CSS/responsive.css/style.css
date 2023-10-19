@@ -1,0 +1,58 @@
+/*Aprendiendo mediaqueries*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/*
+
+Max-width: en un mediaquerie indica cual sera el valor maximo que debe tener el viewport para que se aplique el css que esta dentro de el 
+mediaquerie, es decir si tenemos un max-width de 600px, significa que el mediaquerie entrara siempre y cuandoel viewport sea menor a 600px
+porque el max-width define el tamaño maximo al cual se cumplira la condicion.
+
+*/
+/*
+
+Min-width: en un mediaquerie indica cual sera el valor minimo que debe tener el viewport para que se aplique el css que esta dentro del
+mediaquerie, es decir si tenemos un min-width de 600px, significa que el mediaquerie entrara siempre y cuando el viewport sea mayor a 
+600px porque min-width define el tamaño minimo que se necesita para que el mediaquerie cumpla la condicion.
+
+*/
+
+
+@media (max-width: 600px){
+    body{
+        background-color: black;
+    }
+}
+
+
+@media (min-width:800px) {
+    body {
+        background-color: chocolate;
+    }
+    .img {
+        width: 50%;
+        border-radius: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
