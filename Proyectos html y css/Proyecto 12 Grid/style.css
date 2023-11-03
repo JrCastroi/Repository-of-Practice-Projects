@@ -4,14 +4,17 @@
 }
 
 body {
+    background-image: url(./image/bg.jpg);
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 .container {
     width: 90%;
     height: 800px;
-    outline: 2px solid;
     margin: 40px auto;
+    
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -28,8 +31,10 @@ body {
 
 .element {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+    line-height: 1.5;
+    border-radius: 1em;
 }
 
 .element1 {
@@ -57,13 +62,41 @@ body {
     grid-area: element5;
 }
 
+.user__image {
+    border-radius: 50%;
+    max-width: 25%;
+}
+.user__image, .user__info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.user__name, .user__category {
+    margin: 0.5em 1em;
+    opacity: 0.5;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.card__text {
+    opacity: 0.7;
+    font-size: 0.95em;
+}
+
+@media screen and (max-width: 1150px) {
 
 
+    .container{
+        height: fit-content;
+    }
 
-
-
-
-
+    .element {
+        min-width: 250px;
+    }
+}
 
 
 
