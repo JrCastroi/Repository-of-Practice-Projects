@@ -7,14 +7,13 @@ body {
     background-image: url(./image/bg.jpg);
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .container {
     width: 90%;
     height: 800px;
     margin: 40px auto;
-    
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -91,16 +90,44 @@ body {
 
     .container{
         height: fit-content;
-    }
-
-    .element {
-        min-width: 250px;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas:
+        "element1 element1 element1 element2 element2"
+        "element1 element1 element1 element2 element2"
+        "element1 element1 element1 element2 element2"
+        "element4 element4 element5 element5 element5"
+        "element4 element4 element5 element5 element5"
+        "element4 element4 element5 element5 element5"
+        "element3 element3 element3 element3 element3"
+        "element3 element3 element3 element3 element3"
+    ;
     }
 }
 
+@media screen and (max-width: 715px) {
 
-
-
-
-
-
+    .container{
+        min-width: 250px;
+        height: fit-content;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "element1"
+        "element1"
+        "element1"
+        "element2"
+        "element2"
+        "element2"
+        "element4"
+        "element4"
+        "element4"
+        "element5"
+        "element5"
+        "element5"
+        "element3"
+        "element3"
+        "element3"
+    ;
+    }
+}
