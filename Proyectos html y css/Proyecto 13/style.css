@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent__content {
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 900px;
+    height: fit-content;
+    overflow: auto;
+}
+
+.son {
+    text-align: center;
+    
+}
+
+.son__nav {
+    background-color: dimgray;
+    flex: 1;
+}
+
+.son__body {
+    background-color: lightslategrey;
+    flex: 1;
+}
+
+.son__trend {
+    background-color: darkgray;
+    flex: 1;
+}
+
+
+
+
+
+
+
+

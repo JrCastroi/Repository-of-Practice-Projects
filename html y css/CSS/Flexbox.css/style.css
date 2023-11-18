@@ -22,6 +22,16 @@ body {
     /* flex-start | flex-end | center | space_between | space-around | space-evenly*/
     /* align-items: stretch;*/
     /* stretch | flex-start | flex-end | center | baseline | initial*/
+    /* align-content: stretch;*/
+    /* stretch | flex-start | flex-end | center | space-between | space-around | space-evenly */
+
+    /* direction: rtl (right to left) ; */
+    /* rtl | ltr */
+    /* writing-mode (define si las lineas de texto
+    se disponen horizontal o verticalmente 
+    y la direccion en que avanzan los bloques): vertical-lr; */
+    /* vertical-lr | vertical-rl | horizontal-tb | sideways-rl | sideways-lr*/
+    /* flex-flow: row nowrap*/
 }
 
 .element {
@@ -32,12 +42,12 @@ body {
     width: 100px;
     height: 100px;
     /* order: 1; */
-    /* flex-grow: 2; */
-    /* flex-shrink: 1; */
-    /* flex-basis: 150px; */
+    /* flex-grow: 0; los elementos NO crecen*/
+    /* flex-shrink: 1; los elementos pueden reducir su tamaño a un tamaño mas pequeño que su flex-basis*/
+    /* flex-basis: auto; los elementos tienen un tamaño base en auto*/
     /* aling-self: auto; */
 
-
+    /* flex: 1; = flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/ /*tambien sirve como unidad de medida, parecido al 1fr en css grid*/ 
 
 
 }
@@ -180,10 +190,17 @@ flex-end: alinea el elemento al final del contenedor.
 center: centra el elemento en el contenedor.
 baseline: alinea el elemento con la linea base de su contenido.
 stretch: estira el elemento para llenar el contenedor. 
-
 */
 
+/* sideways: el contenido fluye verticalmente de arriba hacia abajo
+    y todos los glifos, incluidos aquellos de los sistemas de escritura
+    verticales, se colocan de lado hacia la izquierda(lr), derecha (rl)*/
 
+/* flex-flow:  en CSS es una propiedad abreviada que especifica la dirección 
+de un contenedor flexible y su comportamiento de ajuste12. Esta propiedad es 
+una combinación de las propiedades flex-direction y flex-wrap y sus valores son
+los mismos que flex-direction y flex-wrap
+*/
 
 
 
