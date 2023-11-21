@@ -1,4 +1,4 @@
-body {
+* {
     margin: 0;
     box-sizing: border-box;
 }
@@ -6,30 +6,58 @@ body {
 .parent__content {
     display: flex;
     flex-flow: row nowrap;
-    min-height: 900px;
+    min-height: 100vh;
     height: fit-content;
-    overflow: auto;
+    overflow: hidden;
+    gap: 1px;
+    max-height: 100vh;
 }
 
 .son {
     text-align: center;
-    
 }
 
 .son__nav {
     background-color: dimgray;
     flex: 1;
+    min-width: fit-content;
+    display: block;
+    
 }
+
 
 .son__body {
     background-color: lightslategrey;
-    flex: 1;
+    flex: 2;
 }
 
 .son__trend {
     background-color: darkgray;
     flex: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

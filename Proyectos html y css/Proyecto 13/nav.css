@@ -1,0 +1,54 @@
+.nav__item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: fit-content;
+    height: 50px;
+    padding: .5rem;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    transition: .5s ease;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+.nav__item:hover {
+    background-color: cornflowerblue;
+}
+
+.nav__postear {
+    color: darkcyan;
+    background-color: lightskyblue;
+    text-align: center;
+    width: 225px;
+    height: 55px;
+    font-size: 1rem;
+    margin-top: .5rem;
+    padding-top: 1.2rem;
+}
+.nav__postear:hover {
+    background-color: cornflowerblue;
+}
+
+.nav__list {
+    position: relative;
+    color: lightgray;
+    list-style-type: none;
+    text-align: justify;
+    padding-left: 9em;
+    padding-right: 3rem;
+}
+
+
+.nav__card-p {
+    position: fixed;
+    bottom: 10px;
+    width: 225px;
+    height: 65px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.nav__card-p--id{
+    font-size: 1rem;
+}
